@@ -1,0 +1,39 @@
+{
+    "files.associations": {
+        "debug.h": "c",
+        "ch32v20x_misc.h": "c",
+        "ch32v20x.h": "c",
+        "ch32v20x_gpio.h": "c",
+        "ch32v20x_rcc.h": "c",
+        "ch32v20x_usart.h": "c",
+        "system_ch32v20x.h": "c",
+        "core_riscv.h": "c",
+        "*.ld": "linkerscript",
+        "clock.h": "c",
+        "freertosconfig.h": "c"
+    },
+    "makefile.configureOnOpen": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "C_Cpp.default.compilerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/bin/riscv-none-embed-gcc.exe",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/core/inc",
+        "${workspaceFolder}/lib/inc",
+        "${workspaceFolder}/ch32v20x/inc",
+        "${workspaceFolder}/ch32v20x",
+        "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include"
+    ],
+    "C_Cpp.default.defines": [
+        "CH32V20x"
+    ],
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "files.exclude": {
+        "**/build/**": false
+    },
+    "debug.console.fontSize": 12,
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+}

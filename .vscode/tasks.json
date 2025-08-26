@@ -1,0 +1,157 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "make",
+            "args": ["-j16"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Clean Project",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "make",
+            "args": ["-j16", "DEBUG=1"],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Flash Firmware",
+            "type": "shell",
+            "command": "make",
+            "args": ["flash"],
+            "group": "build",
+            "dependsOn": "Build Project",
+            "problemMatcher": []
+        },
+
+        {
+            "label": "Build and Start OpenOCD",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build Project",
+                "Start OpenOCD"
+            ],
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "kill OpenOCD",
+            "type": "shell",
+            "command": "taskkill",
+            "args": [
+                "/IM",
+                "openocd.exe",
+                "/F"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+
+        {
+            "label": "start openocd",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "wch-riscv.cfg",
+                "-c", "init",
+                "-c", "reset halt"
+            ],
+            "isBackground": true,
+            "group": "none",
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": "^(Error|error|Warn|warning|\\*\\* Error|\\*\\* Warning):\\s+(.*)$",
+                        "severity": 1,
+                        "file": 0,
+                        "line": 0,
+                        "message": 2,
+                        "code": 0
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^.*Open On-Chip Debugger.*$",
+                    "endsPattern": "^.*Ready for Remote Connections.*$"
+                }
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Reset with OpenOCD",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "wch-riscv.cfg",
+                "-c", "init; reset; exit"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Erase with OpenOCD",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "wch-riscv.cfg",
+                "-c", "init; reset halt; flash erase_sector wch_riscv 0 last; exit"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+
+        {
+            "label": "Memory Info",
+            "type": "shell",
+            "command": "make",
+            "args": ["meminfo"],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+    ]
+}
