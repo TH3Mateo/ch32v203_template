@@ -79,7 +79,7 @@
         {
             "label": "start openocd",
             "type": "shell",
-            "command": "openocd",
+            "command": "/home/m/programs/wch/OpenOCD/OpenOCD/bin/openocd",
             "args": [
                 "-f", "wch-riscv.cfg",
                 "-c", "init",

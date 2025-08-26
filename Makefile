@@ -259,7 +259,7 @@ clean:
 # Flash firmware using OpenOCD
 flash: $(ELF)
 	@echo "Flashing $(ELF)..."
-	@openocd -f wch-riscv.cfg -c "program $< verify reset exit"
+	@/home/m/programs/wch/OpenOCD/OpenOCD/bin/openocd -f wch-riscv.cfg -c "program $< verify reset exit"
 
 # Robust flash with recovery
 
@@ -280,12 +280,12 @@ gdb: $(ELF)
 # Erase chip
 erase:
 	@echo "Erasing chip..."
-	@openocd -f wch-riscv.cfg -c "init; reset halt; flash erase_sector wch_riscv 0 last; exit"
+	@/home/m/programs/wch/OpenOCD/OpenOCD/bin/openocd -f wch-riscv.cfg -c "init; reset halt; flash erase_sector wch_riscv 0 last; exit"
 
 # Reset target
 reset:
 	@echo "Resetting target..."
-	@openocd -f wch-riscv.cfg -c "init; reset; exit"
+	@/home/m/programs/wch/OpenOCD/OpenOCD/bin/openocd -f wch-riscv.cfg -c "init; reset; exit"
 
 # Show memory usage
 meminfo: $(ELF)

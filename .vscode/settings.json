@@ -14,15 +14,15 @@
     },
     "makefile.configureOnOpen": true,
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
-    "C_Cpp.default.compilerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/bin/riscv-none-embed-gcc.exe",
+    "C_Cpp.default.compilerPath": "/opt/xpack/riscv-none-embed-gcc/bin/riscv-none-embed-gcc",
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/core/inc",
         "${workspaceFolder}/lib/inc",
         "${workspaceFolder}/ch32v20x/inc",
-        "${workspaceFolder}/ch32v20x",
-        "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include"
+        "${workspaceFolder}/ch32v20x"
+        // "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include"
     ],
     "C_Cpp.default.defines": [
         "CH32V20x"

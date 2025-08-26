@@ -8,9 +8,9 @@
                 "${workspaceFolder}/core/inc",
                 "${workspaceFolder}/lib/inc",
                 "${workspaceFolder}/ch32v20x/inc",
-                "${workspaceFolder}/ch32v20x",
-                "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include",
-                "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/lib/gcc/riscv-none-embed/*/include"
+                "${workspaceFolder}/ch32v20x"
+                // "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include",
+                // "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/lib/gcc/riscv-none-embed/*/include"
             ],
             "defines": [
                 "CH32V20x",
@@ -18,7 +18,7 @@
                 "__riscv_xlen=32",
                 "__GNUC__"
             ],
-            "compilerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/bin/riscv-none-embed-gcc.exe",
+            "compilerPath": "/opt/xpack/riscv-none-embed-gcc/bin/riscv-none-embed-gcc",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64",
@@ -32,8 +32,8 @@
             ],
             "browse": {
                 "path": [
-                    "${workspaceFolder}",
-                    "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include"
+                    "${workspaceFolder}"
+                    // "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/riscv-none-embed/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"

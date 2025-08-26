@@ -9,7 +9,7 @@
             "program": "${workspaceFolder}/build/output/main.elf",
             
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/bin/riscv-none-embed-gdb.exe",
+            "miDebuggerPath": "/opt/xpack/riscv-none-embed-gcc/bin/riscv-none-embed-gdb",
             "miDebuggerServerAddress": "localhost:3333",
             "setupCommands": [
                 {

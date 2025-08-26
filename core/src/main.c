@@ -1,8 +1,9 @@
 
-#include "ch32v20x_misc.h"
+// #include "ch32v20x_misc.h"
 #include "system_ch32v20x.h"
 #include "core_riscv.h"
 #include "debug.h"
+#include "ch32v20x_rcc.h"
 
 #include "ch32v20x_gpio.h"
 // #include "FreeRTOSConfig.h"
